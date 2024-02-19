@@ -19,6 +19,7 @@ public class PizzaController {
 
     @PostMapping
     public String order(@RequestBody OrderData orderData) {
+        System.out.println(orderData.toString());
         return pizzaRepository.prepareTheOrder(orderData);
     }
 }
